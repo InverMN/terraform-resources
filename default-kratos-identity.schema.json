@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://example.com/product.schema.json",
+    "title": "Default Identify Schema v0.1",
+    "description": "Schema for Ory Kratos OpenID auth server",
+    "type": "object",
+    "properties": {
+        "traits": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "title": "E-mail",
+                    "type": "string",
+                    "format": "email",
+                    "ory.sh/kratos": {
+                        "credentials": {
+                            "password": {
+                                "identifier": true
+                            }
+                        }
+                    }
+                },
+                "username": {
+                    "type": "string"
+                }
+            },
+            "required": ["email"],
+            "additionalProperties": false
+        }
+    }
+}
