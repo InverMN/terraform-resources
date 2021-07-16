@@ -21,6 +21,7 @@
                     }
                 },
                 "username": {
+                    "title": "Username",
                     "type": "string"
                 }
             },
